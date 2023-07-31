@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class SplashScreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {  /* splash screen from here*/
   @override
   State<StatefulWidget> createState() {
     return SplashScreenState();
@@ -26,7 +26,7 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4), () {
+    Future.delayed(Duration(seconds: 4), () {  /*its duration*/
       Navigator.push(
           context,
           MaterialPageRoute(
@@ -36,7 +36,7 @@ class SplashScreenState extends State<SplashScreen> {
   }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  /* its appearance*/
     return Scaffold(
         backgroundColor: Color.fromARGB(255, 72, 172, 240),
         body: Row(
