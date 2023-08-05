@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:serene/chat.dart';
+import 'calming_tunes.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -83,7 +84,14 @@ class _SereneState extends State<Welcome> {
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Container(),
                     ),
-                    onTap: () async {},
+                    onTap: () async {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CalmingTunes(),
+                          )
+                      );
+                    },
                   ),
                 ]),
             const SizedBox(
