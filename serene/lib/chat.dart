@@ -21,6 +21,32 @@ class _chatState extends State<chat> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 204, 221, 226),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+
+        leading: IconButton(
+          onPressed: (){
+            Navigator.of(context).pop();
+          }, 
+          icon: const Icon(Icons.arrow_back)
+        ),
+        backgroundColor: const Color.fromARGB(255, 111, 88, 75),
+        title: const Text(
+          'Serene',
+          style: TextStyle(
+            shadows: <Shadow>[
+              Shadow(
+                offset: Offset(2.0, 3.0),
+                blurRadius: 3,
+                color: Color.fromARGB(104, 0, 0, 0),
+              ),
+            ],
+            fontSize: 25,
+          ),
+        ),
+        elevation: 0,
+      ),
+
       body: Column(
         children: [
           const Text(
