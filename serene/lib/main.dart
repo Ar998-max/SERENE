@@ -26,11 +26,11 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 4), () {  /*its duration*/
+    Future.delayed(const Duration(seconds: 4), () {  /*its duration*/
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Welcome(),
+            builder: (context) => const Welcome(),
           ));
     });
   }
@@ -38,7 +38,7 @@ class SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {  /* its appearance*/
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 72, 172, 240),
+        backgroundColor: const Color.fromARGB(255, 72, 172, 240),
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,16 +52,18 @@ class SplashScreenState extends State<SplashScreen> {
                       width: 800,
                       child: Image.network(
                           'https://media.discordapp.net/attachments/1113666246123200522/1114954114393190521/Serene-removebg-preview1.png')),
-                  Text(
+                  const Text(
                     'Healthy Mind, Healthy life',
                     style: TextStyle(
                         color: Color.fromARGB(255, 89, 66, 54),
                         fontWeight: FontWeight.w700,
                         fontSize: 15),
                   )
-                ]),
+                ]
+            ),
           ],
-        ));
+        )
+    );
   }
 }
 

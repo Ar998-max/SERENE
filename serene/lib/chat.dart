@@ -20,9 +20,9 @@ class _chatState extends State<chat> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 204, 221, 226),
-      body: Container(
-        child: Column(children: [
+      backgroundColor: const Color.fromARGB(255, 204, 221, 226),
+      body: Column(
+        children: [
           const Text(
             'Questions',
             style: TextStyle(
@@ -37,14 +37,14 @@ class _chatState extends State<chat> {
             ),
           ),
           _questionwidget()
-        ]),
-      ),
+        ]
+      )
     );
   }
 
   _questionwidget() {
     return Column(
-      children: [
+      children: const [
         Text(
           'Question 1/5',
           style: TextStyle(
