@@ -31,11 +31,11 @@ class _CalmingTunes extends State<CalmingTunes> {
             ),
           ),
           const SizedBox(height: 50,),
-          _musicWidget("Music 1", "1.mp3"),
+          _musicWidget("Music 1", "audio/calmingTunes/1.mp3"),
           const SizedBox(height: 50,),
-          _musicWidget("Music 2", "2.mp3"),
+          _musicWidget("Music 2", "audio/calmingTunes/1.mp3"),
           const SizedBox(height: 50,),
-          _musicWidget("Music 3", "3.mp3"),
+          _musicWidget("Music 3", "audio/calmingTunes/1.mp3"),
         ]
       )
     );
