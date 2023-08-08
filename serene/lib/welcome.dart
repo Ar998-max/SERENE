@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:serene/chat.dart';
+import 'calming_tunes.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -12,10 +13,10 @@ class _SereneState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 204, 221, 226),
+      backgroundColor: const Color.fromARGB(255, 204, 221, 226),
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color.fromARGB(255, 111, 88, 75),
+        backgroundColor: const Color.fromARGB(255, 111, 88, 75),
         title: const Text(
           'Serene',
           style: TextStyle(
@@ -38,7 +39,7 @@ class _SereneState extends State<Welcome> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+              children: const [
                 Text(
                   'Glad to See You Here!',
                   style: TextStyle(
@@ -57,7 +58,7 @@ class _SereneState extends State<Welcome> {
                     child: Container(
                       height: 250,
                       width: 250,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 111, 88, 75),
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Container(),
@@ -66,27 +67,34 @@ class _SereneState extends State<Welcome> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => chat(),
+                          builder: (context) => const chat(),
                         ),
                       );
                     },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   InkWell(
                     child: Container(
                       height: 250,
                       width: 250,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Color.fromARGB(255, 111, 88, 75),
                           borderRadius: BorderRadius.all(Radius.circular(20))),
                       child: Container(),
                     ),
-                    onTap: () async {},
+                    onTap: () async {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CalmingTunes(),
+                          )
+                      );
+                    },
                   ),
                 ]),
-            SizedBox(
+            const SizedBox(
               height: 10,
             )
           ]),
